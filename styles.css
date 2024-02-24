@@ -62,27 +62,27 @@ body {
   background-repeat: no-repeat;
 }
 .front {
-  background: url(/assets/front-side.png);
+  background: url(./assets/front-side.png);
   transform: translateZ(50px);
 }
 .back {
-  background: url(/assets/back-side.png);
+  background: url(./assets/back-side.png);
   transform: rotateY(180deg) translateZ(50px);
 }
 .right {
-  background: url(/assets/right-side.png);
+  background: url(./assets/right-side.png);
   transform: rotateY(90deg) translateZ(50px);
 }
 .left {
-  background: url(/assets/left-side.png);
+  background: url(./assets/left-side.png);
   transform: rotateY(-90deg) translateZ(50px);
 }
 .top {
-  background: url(/assets/upper-side.png);
+  background: url(./assets/upper-side.png);
   transform: rotateX(90deg) translateZ(50px);
 }
 .bottom {
-  background: url(/assets/down-side.png);
+  background: url(./assets/down-side.png);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
@@ -105,7 +105,7 @@ body {
   display: flex;
   align-items: center;
   background-color: white;
-  background-image: url(/assets/PlainsBiome.webp);
+  background-image: url(./assets/PlainsBiome.webp);
   background-position-x: -200px;
   background-repeat: no-repeat;
   position: relative;
@@ -118,12 +118,12 @@ body {
   top: -25px;
   left: -25px;
   position: absolute;
-  background: url(/assets/glass.png);
+  background: url(./assets/glass.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .container {
-  background-image: url(/assets/brick-stone-wallpaper.jpg);
+  background-image: url(./assets/brick-stone-wallpaper.jpg);
 }
 .bottom-container {
   height: 100%;
@@ -136,5 +136,5 @@ body {
   border-top: 1px solid black;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(/assets/perspective-wood.webp);
+  background-image: url(./assets/perspective-wood.webp);
 }
