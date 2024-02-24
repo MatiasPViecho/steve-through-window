@@ -1,0 +1,140 @@
+body,
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+.main-section {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 7fr 1fr;
+}
+.container {
+  width: 100vw;
+  perspective: 550px;
+  perspective-origin: 50% 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.box {
+  transition: all 5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  position: absolute;
+  cursor: pointer;
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg)
+    rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
+    skewY(0deg);
+  /* animation: rotate 10s infinite ease-in-out; */
+}
+.box:hover {
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-40deg) rotateY(90deg)
+    rotateZ(90deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
+    skewY(0deg);
+}
+.box:active {
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(40deg) rotateY(-40deg)
+    rotateZ(-90deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
+    skewY(0deg);
+}
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: #fff;
+}
+.box > div {
+  pointer-events: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.front {
+  background: url(/assets/front-side.png);
+  transform: translateZ(50px);
+}
+.back {
+  background: url(/assets/back-side.png);
+  transform: rotateY(180deg) translateZ(50px);
+}
+.right {
+  background: url(/assets/right-side.png);
+  transform: rotateY(90deg) translateZ(50px);
+}
+.left {
+  background: url(/assets/left-side.png);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+.top {
+  background: url(/assets/upper-side.png);
+  transform: rotateX(90deg) translateZ(50px);
+}
+.bottom {
+  background: url(/assets/down-side.png);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+
+.hint {
+  position: absolute;
+  top: -80px;
+  left: 80px;
+  border: 2px solid black;
+  color: black;
+  pointer-events: none;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 8px;
+  min-width: 12ch;
+  text-align: right;
+  background: white;
+}
+
+.marquee-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  background-image: url(/assets/PlainsBiome.webp);
+  background-position-x: -200px;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.marquee-container::after {
+  content: '';
+  width: 550px;
+  pointer-events: none;
+  height: 550px;
+  top: -25px;
+  left: -25px;
+  position: absolute;
+  background: url(/assets/glass.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container {
+  background-image: url(/assets/brick-stone-wallpaper.jpg);
+}
+.bottom-container {
+  height: 100%;
+  perspective: 500px;
+  transform-style: preserve-3d;
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg)
+    rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
+    skewY(0deg);
+  width: 100%;
+  border-top: 1px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(/assets/perspective-wood.webp);
+}
